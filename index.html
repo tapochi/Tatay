@@ -85,12 +85,29 @@ body {
 .glass-card {
   width: 90%;
   max-width: 720px;
+  max-height: 80vh;      /* Limit height to 80% of viewport */
   padding: 3%;
   background: rgba(255,255,255,0.12);
   backdrop-filter: blur(18px);
   border-radius: 2vw;
   text-align: center;
   animation: glassIn 0.8s forwards;
+  overflow-y: auto;      /* Enable vertical scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+}
+
+/* Optional: scrollbar styling */
+.glass-card::-webkit-scrollbar {
+  width: 8px;
+}
+
+.glass-card::-webkit-scrollbar-thumb {
+  background-color: rgba(56,189,248,0.5);
+  border-radius: 4px;
+}
+
+.glass-card::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .glass-card p {
